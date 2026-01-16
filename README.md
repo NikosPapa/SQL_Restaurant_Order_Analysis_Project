@@ -13,6 +13,8 @@ The project workflow begins with creating the schema and tables, importing the d
 
 ## Data Dictionary
 
+<div align="center">
+
 | Table          | Field              | Description                                           |
 |----------------|------------------|-------------------------------------------------------|
 | menu_items     | menu_item_id      | Unique ID of a menu item                              |
@@ -25,6 +27,8 @@ The project workflow begins with creating the schema and tables, importing the d
 | order_details  | order_time        | Time an order was put in (HH:MM:SS AM/PM)           |
 | order_details  | item_id           | Matches the menu_item_id in the menu_items table    |
 
+</div>
+
 ---
 
 ## Project Scope
@@ -34,6 +38,7 @@ The project workflow begins with creating the schema and tables, importing the d
 - **Category-level pricing and popularity analysis**  
 - **Combined insights** linking orders with menu items  
 - **Actionable insights** for restaurant strategy  
+
 ---
 
 ## Exploratory Data Analysis (EDA)
@@ -76,6 +81,8 @@ This analysis explores the **menu composition, pricing, and category trends**.
 
 - **Number of dishes per category:**
 
+<div align="center">
+
 | Category  | Number of Dishes |
 |-----------|-----------------|
 | American  | 6               |
@@ -83,7 +90,11 @@ This analysis explores the **menu composition, pricing, and category trends**.
 | Mexican   | 9               |
 | Italian   | 9               |
 
+</div>
+
 - **Average dish price per category:**
+
+<div align="center">
 
 | Category  | Average Price ($) |
 |-----------|-----------------|
@@ -91,6 +102,8 @@ This analysis explores the **menu composition, pricing, and category trends**.
 | Asian     | 13.48           |
 | Mexican   | 11.80           |
 | Italian   | 16.75           |
+
+</div>
 
 ### Observations
 
@@ -114,6 +127,8 @@ This analysis explores **order patterns, item frequency, and order volumes** to 
 - **Orders with the most items:** 7 orders had 14 items each.  
   **Order IDs and item counts:**
 
+<div align="center">
+
 | order_id | num_items |
 |----------|-----------|
 | 330      | 14        |
@@ -123,6 +138,8 @@ This analysis explores **order patterns, item frequency, and order volumes** to 
 | 2675     | 14        |
 | 3473     | 14        |
 | 4305     | 14        |
+
+</div>
 
 - The remaining orders have **13 items or fewer**.
 
@@ -147,33 +164,29 @@ The final analysis merges `menu_items` and `order_details` to answer **business-
 
 This combined analysis provides actionable insights by connecting **menu composition with actual customer behavior**, enabling strategic decisions around menu optimization, pricing, and promotions.
 
---- 
-
-## Combined Analysis: Linking Menu Items and Orders (`combined_analysis`)
-
-This analysis merges the **menu_items** and **order_details** tables to answer business-relevant questions such as item popularity, revenue generation, and customer spending behavior.
-
 ---
 
 ### 1. Least and Most Ordered Items
 
-The following table shows the **least and most ordered items**, along with their categories:
+<div align="center">
 
 | Item Name       | Category | Number of Orders |
 |-----------------|----------|-----------------|
 | Chicken Tacos   | Mexican  | 123             |  <!-- Least ordered -->
 | Hamburger       | American | 622             |  <!-- Most ordered -->
 
+</div>
+
 **Observations:**
 
-- The Hamburger is the most ordered item, indicating strong popularity and consistent demand.
+- The Hamburger is the most ordered item, indicating strong popularity and consistent demand.  
 - The Chicken Tacos is the least ordered item, suggesting lower demand; this item could benefit from promotion, menu repositioning, or removal to optimize sales.
 
 ---
 
 ### 2. Top 5 Highest-Spending Orders
 
-These orders represent the **highest total spend per order**:
+<div align="center">
 
 | Order ID | Total Spend ($) |
 |----------|----------------|
@@ -182,6 +195,8 @@ These orders represent the **highest total spend per order**:
 | 1957     | 190.10         |
 | 330      | 189.70         |
 | 2675     | 185.10         |
+
+</div>
 
 **Observations:**
 
@@ -192,7 +207,7 @@ These orders represent the **highest total spend per order**:
 
 ### 3. Composition of the Highest-Spend Order
 
-The **highest-spend order (Order 440)** included a variety of items from all categories:
+<div align="center">
 
 | Category | Number of Items |
 |----------|----------------|
@@ -200,6 +215,8 @@ The **highest-spend order (Order 440)** included a variety of items from all cat
 | American | 2              |
 | Italian  | 8              |
 | Asian    | 2              |
+
+</div>
 
 **Observations:**
 
@@ -209,6 +226,8 @@ The **highest-spend order (Order 440)** included a variety of items from all cat
 ---
 
 ### 4. Details of Top 5 Highest-Spend Orders
+
+<div align="center">
 
 | Order ID | Category | Number of Items |
 |----------|----------|----------------|
@@ -233,6 +252,8 @@ The **highest-spend order (Order 440)** included a variety of items from all cat
 | 2675     | Italian  | 4              |
 | 2675     | Mexican  | 4              |
 
+</div>
+
 **Observations:**
 
 - These top orders consistently include **Italian and Asian dishes**, which are often higher-priced menu items.  
@@ -247,5 +268,6 @@ The **highest-spend order (Order 440)** included a variety of items from all cat
 2. **Category Contribution:** Italian and Asian dishes are critical drivers of order value.  
 3. **High-Spend Orders:** The top 5 orders highlight the importance of group or bulk orders in total revenue.  
 4. **Business Applications:** Insights can inform **menu optimization, pricing strategies, and targeted promotions** to increase profitability.
+
 
 
